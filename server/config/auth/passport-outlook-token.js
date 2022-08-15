@@ -47,3 +47,10 @@ passport.deserializeUser(function (id, done) {
 		done(err, user);
 	});
 });
+
+exports.ensureAuthenticated = (req, res, next) => {
+	if (req.isAuthenticated()) {
+		return next();
+	}
+	res.redirect('/login');
+};
