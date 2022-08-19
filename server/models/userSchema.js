@@ -27,15 +27,13 @@ const userSchema = new mongoose.Schema({
 	accessToken: {
 		type: String,
 	},
-	department: {
-		type: String,
-	},
-	active: {
-		type: Boolean,
-		default: true,
-		select: false,
-	},
 	bookmarks: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Product',
+		},
+	],
+	purchased: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Product',

@@ -5,12 +5,21 @@ const productSchema = new mongoose.Schema({
 		type: String,
 		required: [true, 'A product should have a name'],
 	},
+	images: [
+		{
+			type: String,
+		},
+	],
 	cost: {
 		type: Number,
 	},
 	owner: {
 		type: mongoose.Types.ObjectId,
 		ref: 'User',
+	},
+	sold: {
+		type: Boolean,
+		default: False,
 	},
 	description: {
 		type: String,

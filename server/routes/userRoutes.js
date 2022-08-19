@@ -4,7 +4,7 @@ const passport = require('passport');
 
 const userController = require('../controllers/userController');
 
-router.post(
+router.get(
 	'/auth/outlook',
 	passport.authenticate('windowslive', {
 		scope: ['openid', 'profile', 'offline_access', 'https://outlook.office.com/Mail.Read'],
@@ -18,6 +18,7 @@ router.get(
 		res.redirect('/');
 	},
 );
+
 router.get('/logout', function (req, res) {
 	req.logout();
 	res.redirect('/');
