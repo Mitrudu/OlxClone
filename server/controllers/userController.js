@@ -1,6 +1,6 @@
 const User = require('../models/userSchema');
-const transporter = require('../config/nodemailer');
-const Email = require('../config/nodemailer');
+// const transporter = require('../utils/config/nodemailer');
+const Email = require('../utils/config/nodemailer');
 
 module.exports.outlookOauth = async (req, res) => {
 	const user = await User.find({email: req.user.email});

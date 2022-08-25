@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 const passport = require('passport');
-require('./config/auth/passport-outlook-token');
+require('./utils/config/auth/passport-outlook-token');
 
 const userRouter = require('./routes/userRoutes');
 

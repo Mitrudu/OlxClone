@@ -1,7 +1,7 @@
 const passport = require('passport');
 const OutlookStrategy = require('passport-outlook').Strategy;
 
-const User = require('../../models/userSchema');
+const User = require('../../../models/userSchema');
 
 // passport.use(new OutlookStrategy({}));
 

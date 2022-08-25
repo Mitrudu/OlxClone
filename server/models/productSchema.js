@@ -10,6 +10,10 @@ const productSchema = new mongoose.Schema({
 			type: String,
 		},
 	],
+	type: {
+		type: String,
+		required: true,
+	},
 	cost: {
 		type: Number,
 	},
@@ -19,16 +23,16 @@ const productSchema = new mongoose.Schema({
 	},
 	sold: {
 		type: Boolean,
-		default: False,
+		default: false,
 	},
 	description: {
 		type: String,
 		minlength: 10,
 	},
-	active: {
-		type: Boolean,
-		default: true,
-	},
+	// active: {
+	// 	type: Boolean,
+	// 	default: true,
+	// }, since we have sold field
 });
 
 const Product = mongoose.model('Product', productSchema);

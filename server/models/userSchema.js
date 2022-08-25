@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
 	accessToken: {
 		type: String,
 	},
-	bookmarks: [
+	recentlyViewed: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Product',
